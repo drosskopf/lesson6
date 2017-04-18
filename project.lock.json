@@ -661,7 +661,7 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.Kestrel.dll": {}
         }
       },
-      "Microsoft.AspnetCore.StaticFiles/1.0.0": {
+      "Microsoft.AspNetCore.StaticFiles/1.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0",
@@ -1023,6 +1023,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Composite.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Embedded/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "1.0.0",
+          "System.Runtime.Extensions": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.Extensions.FileProviders.Physical/1.0.0": {
@@ -1560,6 +1573,59 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Swashbuckle.AspNetCore/1.0.0-rc3": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "1.0.0-rc3",
+          "Swashbuckle.AspNetCore.SwaggerGen": "1.0.0-rc3",
+          "Swashbuckle.AspNetCore.SwaggerUI": "1.0.0-rc3"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/1.0.0-rc3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/1.0.0-rc3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "1.0.0-rc3",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/1.0.0-rc3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Routing": "1.0.0",
+          "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -3322,7 +3388,7 @@
           "System.Xml.ReaderWriter": "4.0.11"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -3818,10 +3884,10 @@
         "microsoft.aspnetcore.server.kestrel.nuspec"
       ]
     },
-    "Microsoft.AspnetCore.StaticFiles/1.0.0": {
+    "Microsoft.AspNetCore.StaticFiles/1.0.0": {
       "sha512": "pXiUBJtpO0fIlGEg/ESykhbIZ2+I+9Y+3qXzN19zZDDF+tD88eATg3A5MHMXu/VmqaROLfvpGJmJ6uOLUGsBVQ==",
       "type": "package",
-      "path": "Microsoft.AspnetCore.StaticFiles/1.0.0",
+      "path": "Microsoft.AspNetCore.StaticFiles/1.0.0",
       "files": [
         "Microsoft.AspNetCore.StaticFiles.1.0.0.nupkg.sha512",
         "Microsoft.AspNetCore.StaticFiles.nuspec",
@@ -4136,6 +4202,17 @@
         "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Composite.xml",
         "microsoft.extensions.fileproviders.composite.1.0.0.nupkg.sha512",
         "microsoft.extensions.fileproviders.composite.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Embedded/1.0.0": {
+      "sha512": "mMCI3/BLXAyBCDneqOI4ohETd0IXjbXZdoiCm1dYdnOdV193ByEOCFQ6/Vn9RVdU5UlC4Nn1P4J5Df7pXG/vGg==",
+      "type": "package",
+      "path": "Microsoft.Extensions.FileProviders.Embedded/1.0.0",
+      "files": [
+        "Microsoft.Extensions.FileProviders.Embedded.1.0.0.nupkg.sha512",
+        "Microsoft.Extensions.FileProviders.Embedded.nuspec",
+        "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Embedded.dll",
+        "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Embedded.xml"
       ]
     },
     "Microsoft.Extensions.FileProviders.Physical/1.0.0": {
@@ -4612,6 +4689,54 @@
         "lib/netstandard1.0/_._",
         "runtime.native.System.Security.Cryptography.4.0.0.nupkg.sha512",
         "runtime.native.System.Security.Cryptography.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore/1.0.0-rc3": {
+      "sha512": "ct93K1ZG+gN3Air66XeVmLWSUqJmIEOL+oBkTd2bzErakdtiTJtz15bSiW6z4X60yOzGbw0tnPkkE47UT0Ob8g==",
+      "type": "package",
+      "path": "Swashbuckle.AspNetCore/1.0.0-rc3",
+      "files": [
+        "Swashbuckle.AspNetCore.1.0.0-rc3.nupkg.sha512",
+        "Swashbuckle.AspNetCore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/1.0.0-rc3": {
+      "sha512": "ITV0plnw+mi3mEHe0Bw1PVIxEsnWnYs0zJzGA3aVV2Nglb9ia1Vi7TChlL1Vaix4PnOYiK1XWDUScUW2L66MGg==",
+      "type": "package",
+      "path": "Swashbuckle.AspNetCore.Swagger/1.0.0-rc3",
+      "files": [
+        "Swashbuckle.AspNetCore.Swagger.1.0.0-rc3.nupkg.sha512",
+        "Swashbuckle.AspNetCore.Swagger.nuspec",
+        "lib/net451/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net451/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.xml"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/1.0.0-rc3": {
+      "sha512": "ZVmQpbXMK0Mtvyi0lTDglmqNZC3B+FreOQ3kyX7pcv0QLPXM7ZtzbAzRq7hT6tu17chPrHSLe/D2mv4TxJ/VPA==",
+      "type": "package",
+      "path": "Swashbuckle.AspNetCore.SwaggerGen/1.0.0-rc3",
+      "files": [
+        "Swashbuckle.AspNetCore.SwaggerGen.1.0.0-rc3.nupkg.sha512",
+        "Swashbuckle.AspNetCore.SwaggerGen.nuspec",
+        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.xml"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/1.0.0-rc3": {
+      "sha512": "ankI8NF1nBhOClQB/Zr/0Omw2Q2LEe8pG9oxAgzzJp6nOJfGsrLmYaZjuI8aL0tzZ4/PiIyKgSzeJc+TZJTghg==",
+      "type": "package",
+      "path": "Swashbuckle.AspNetCore.SwaggerUI/1.0.0-rc3",
+      "files": [
+        "Swashbuckle.AspNetCore.SwaggerUI.1.0.0-rc3.nupkg.sha512",
+        "Swashbuckle.AspNetCore.SwaggerUI.nuspec",
+        "lib/net451/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/net451/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.xml"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -9125,13 +9250,13 @@
       "Microsoft.AspNetCore.Hosting >= 1.0.0",
       "Microsoft.AspnetCore.Diagnostics >= 1.0.0",
       "Microsoft.AspnetCore.Mvc >= 1.0.0",
-      "Microsoft.AspnetCore.StaticFiles >= 1.0.0",
       "Microsoft.Aspnetcore.Server.Kestrel >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 1.0.0",
       "Microsoft.Extensions.Configuration.CommandLine >= 1.0.0",
       "Microsoft.Extensions.Configuration.EnvironmentVariables >= 1.0.0",
       "Microsoft.Extensions.Configuration.Json >= 1.0.0",
-      "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0"
+      "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0",
+      "Swashbuckle.AspNetCore >= 1.0.0-rc3"
     ],
     ".NETCoreApp,Version=v1.1": [
       "Microsoft.NETCore.App >= 1.0.1"

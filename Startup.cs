@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace webapp
 {
@@ -28,6 +29,21 @@ namespace webapp
             services.AddOptions();
             services.Configure<Family>(Configuration.GetSection("Family"));
             services.AddMvc();
+            services.AddSwaggerGen(
+                c =>
+                {
+                    c.SwaggerDoc("v1",
+                        new Info
+                        {
+                            Version = "v1",
+                            Title = "Swashbuckle Sample API",
+                            Description = "A sample API for testing Swashbuckle",
+                            TermsOfService = "Some terms ..."
+                        }
+                    );
+                }
+            );
+
         }
         public void Configure(IApplicationBuilder app, IOptions<Family> family, IHostingEnvironment env)
         {
@@ -47,12 +63,23 @@ namespace webapp
             app.UseMiddlewareB();
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            
             app.UseMvc(route=>{
                 route.MapRoute(name:"Default",
                 template:"{controller=Home}/{action=Index}/{id?}"
                 );
             }
             );
+            app.UseSwagger(c =>
+            {
+                c.PreSerializeFilters.Add((swagger, httpReq) => 
+swagger.Host = httpReq.Host.Value);
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1 Docs");
+            });
+
              
         }
     }
