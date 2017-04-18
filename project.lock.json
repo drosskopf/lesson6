@@ -2,7 +2,7 @@
   "locked": false,
   "version": 2,
   "targets": {
-    ".NETCoreApp,Version=v1.1": {
+    ".NETCoreApp,Version=v1.6": {
       "Libuv/1.9.0": {
         "type": "package",
         "dependencies": {
@@ -9258,7 +9258,7 @@
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0",
       "Swashbuckle.AspNetCore >= 1.0.0-rc3"
     ],
-    ".NETCoreApp,Version=v1.1": [
+    ".NETCoreApp,Version=v1.6": [
       "Microsoft.NETCore.App >= 1.0.1"
     ]
   },
